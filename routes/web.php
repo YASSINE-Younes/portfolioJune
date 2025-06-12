@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use   App\Http\Controllers\ThemeController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
+Route::controller(ThemeController::class)->name('Theme.')->group(function(){
+    Route::get('/' , "home")->name('home');
+    Route::get('/about' , "about")->name('about');
+    Route::get('/services' , "services")->name('services');
+    Route::get('/portfolio' , "portfolio")->name('portfolio');
+    Route::get('/contact' , "contact")->name('contact');
+ 
 });
+
+
+ 

@@ -1,9 +1,10 @@
 @extends('masterpro')
-@section('home-active','active')
+@section('portfolio-active','active')
 @section('content')
 
   <!-- Hero Section -->
-        @include('theme.hero')
+              @include('theme.portfolio')
+
 <!-- /Hero Section -->
 
 
